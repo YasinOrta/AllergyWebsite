@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <title>Leaflet</title>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="navbarlink">HOME</a>
+            <a href="#aboutApp" class="navbarlink">ABOUT APP</a>
+            <a href="#aboutAllergies" class="navbarlink">ABOUT ALLERGIES</a>
+            <a href="#download" class="navbarlink">DOWNLOAD APP</a>
+        </nav>     
+    </header>
+
+    <section class="home" id="home"></section>
+
+     
+    <!-- Home Container (slideshow)-->
+    <!-- style="display: block" in the div shows first image of the slide-->
+    
+    <div class="slideshow-container">
+        <div class="mySlides fade" style="display: block;">
+            <div class="numbertext">1 / 3</div>
+            <img src="Images/1.jpg" style="width:100%">
+             <!--<div class="text">Caption Text</div>-->
+        </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="Images/2.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="Images/3.jpg" style="width:100%">
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+
+    <!-- About Container -->
+    <div class="about-container" id="aboutApp">
+        <div class="content" style="max-width: 700px;">
+            <h5 class="center padding-64"><span class="tag wide">ABOUT THE APP</span></h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, quae dolores distinctio sint, laborum quod incidunt corporis voluptate in delectus quis temporibus ea exercitationem eaque cum nesciunt, consequatur maiores nostrum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis enim vero eligendi, assumenda, corporis ad optio consectetur omnis, itaque quibusdam ratione vitae modi suscipit tempore qui quia reiciendis ipsum. Quisquam.</p>
+        <img src="Images/i-think-im-allergic-to-morning-quote-1.jpg" style="width:100%;max-width:1000px" class="margin-top">
+            <br>
+        </div>
+    </div>
+
+    <!-- Menu Container -->
+    
+    <div class="allergy-container" id="aboutAllergies">
+        <div class="content" style="max-width:700px">
+       
+            <h5 class="center padding-48"><span class="tag wide">ALLERGY TYPES</span></h5>
+            <br>
+  
+            <div class="w3-row w3-center w3-card w3-padding">
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Drug');" id="myLink" >
+                <div class="w3-col s6 tablink">DRUG ALLERGY</div>
+              </a>
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Food'); ">
+                <div class="w3-col s6 tablink">FOOD ALLERGY</div>
+              </a>
+        
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Insect');">
+                <div class="w3-col s6 tablink">INSECT ALLERGY</div>
+              </a>
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Latex');">
+                <div class="w3-col s6 tablink">LATEX ALLERGY</div>
+              </a>
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Mold');">
+                <div class="w3-col s6 tablink">MOLD ALLERGY</div>
+              </a>
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Pet');">
+                <div class="w3-col s6 tablink">PET ALLERGY</div>
+              </a>
+              <a href="javascript:void(0)" class="menulink" onclick="openMenu(event, 'Pollen');">
+                <div class="w3-col s6 tablink">POLLEN ALLERGY</div>
+              </a>
+            </div>
+
+            <div id="Drug" class="container menu padding-48 card">
+              <p class="w3-text-grey" style="margin-top: 10px;"> drug allergy is the abnormal reaction of your immune system to a medication. Any medication — over-the-counter, 
+                prescription or herbal — is capable of inducing a drug allergy. However, a drug allergy is more likely with certain medications.
+
+                The most common signs and symptoms of drug allergy are hives, rash or fever. A drug allergy may cause serious reactions, 
+                including a life-threatening condition that affects multiple body systems (anaphylaxis).
+                
+                A drug allergy is not the same as a drug side effect, a known possible reaction listed on a drug label. 
+                A drug allergy is also different from drug toxicity caused by an overdose of medication.</p><br>
+              <!--<h5>What Are the Signs of an Allergic Reaction Due to Drug Allergy?</h5>-->
+            </div>
+
+            <div id="Food" class="container menu padding-48 card">
+              <p class="w3-text-grey" style="margin-top: 10px;">Food allergy is an immune system reaction that occurs soon after eating a certain food. 
+                Even a tiny amount of the allergy-causing food can trigger signs and symptoms such as digestive problems, hives or swollen airways. 
+                In some people, a food allergy can cause severe symptoms or even a life-threatening reaction known as anaphylaxis.
+
+                Food allergy affects an estimated 8% of children under age 5 and up to 4% of adults. While there's no cure, 
+                some children outgrow their food allergies as they get older.
+                
+                It's easy to confuse a food allergy with a much more common reaction known as food intolerance. While bothersome, 
+                food intolerance is a less serious condition that does not involve the immune system.</p><br>
+            </div>  
+
+            <div id="Insect" class="container menu padding-48 card">
+              <p class="w3-text-grey" style="margin-top: 10px;">Most people stung or bitten by insects suffer pain, redness, itching and minor swelling in the area 
+                around the bite or sting. This is a normal reaction. Most people get better within hours or days.
+
+                An allergic reaction to insects that don’t sting or bite, like cockroaches or dust mites, is different. 
+                You may sneeze, cough, have a runny or stuffy nose, or itchy eyes, nose, mouth or throat. 
+                These symptoms can be confused with the common cold, but last for weeks or months at a time. If you have asthma, 
+                an allergic reaction could trigger asthma symptoms or an asthma attack.
+                
+                People can have a serious allergic reaction to stinging or biting insects. A life-threatening allergic reaction (anaphylaxis) produces signs 
+                and symptoms that require immediate medical attention. Without immediate treatment, anaphylaxis may cause death. Symptoms usually 
+                involve more than one organ system (part of the body), such as the skin or mouth, the lungs, the heart, and the gut. Some symptoms include:
+                
+                Skin rashes, itching or hives
+                Swelling of the lips, tongue or throat
+                Shortness of breath, trouble breathing or wheezing (whistling sound during breathing)
+                Dizziness and/or fainting
+                Stomach pain, vomiting, bloating or diarrhea
+                Feeling like something awful is about to happen
+                Other serious but non-allergic reactions include:
+                
+                A toxic reaction that happens when the body reacts to insect venom like it is a poison. A toxic reaction can cause symptoms similar 
+                to those of an allergic reaction. Other symptoms include nausea, fever, fainting, seizures, shock and even death.
+                Serum sickness which is an unusual reaction to a foreign substance in the body. It can cause symptoms hours or days after the sting or bite. 
+                Symptoms include fever, joint pain, other flu-like symptoms and sometimes hives.</p><br>
+             </div>
+        
+              <div id="Latex" class="container menu padding-48 card">
+                <p class="w3-text-grey" style="margin-top: 10px;">Latex allergy is a reaction to certain proteins found in natural rubber latex, 
+                  a product made from the rubber tree. If you have a latex allergy, your body mistakes latex for a harmful substance.
+
+                  Latex allergy may cause itchy skin and hives or even anaphylaxis, a potentially life-threatening condition that can cause throat swelling and 
+                  severe difficulty breathing. Your doctor can determine if you have a latex allergy or if you're at risk of developing a latex allergy.
+                  
+                  Understanding latex allergy and knowing common sources of latex can help you prevent allergic reactions.</p><br>
+              </div>
+        
+              <div id="Mold" class="container menu padding-48 card">        
+                <p class="w3-text-grey" style="margin-top: 10px;">If you have a mold allergy, your immune system overreacts when you breathe in mold spores. 
+                  A mold allergy can cause coughing, itchy eyes and other symptoms that make you miserable. In some people, a mold allergy is linked to asthma and 
+                  exposure causes restricted breathing and other airway symptoms.
+
+                  If you have a mold allergy, the best defense is to reduce your exposure to the types of mold that cause your reaction. Medications can help keep 
+                  mold allergy reactions under control.</p><br>           
+                <!--<h5>Blueberry Pancakes</h5>-->
+                <p class="w3-text-grey">A mold allergy causes the same signs and symptoms that occur in other types of upper respiratory allergies. 
+                  Signs and symptoms of allergic rhinitis caused by a mold allergy can include:
+
+                  Sneezing
+                  Runny or stuffy nose
+                  Cough and postnasal drip
+                  Itchy eyes, nose and throat
+                  Watery eyes
+                  Dry, scaly skin
+
+                  Mold allergy symptoms vary from person to person and range from mild to severe. 
+                  You might have year-round symptoms or symptoms that flare up only during certain times of the year. 
+                  You might notice symptoms when the weather is damp or when you're in indoor or outdoor spaces that have high concentrations of mold.</p>
+              </div>
+        
+              <div id="Pet" class="container menu padding-48 card">
+                <p class="w3-text-grey" style="margin-top: 10px;">Pet allergy is an allergic reaction to proteins found in an animal's skin cells, saliva or urine. 
+                  Signs of pet allergy include those common to hay fever, such as sneezing and runny nose. Some people may also experience signs of asthma, such as wheezing and difficulty breathing.
+
+                  Most often, pet allergy is triggered by exposure to the dead flakes of skin (dander) a pet sheds. Any animal with fur can be a source of pet allergy, 
+                  but pet allergies are most commonly associated with cats and dogs.
+                  
+                  If you have a pet allergy, the best strategy is to avoid or reduce exposure to the animal as much as possible. Medications or other treatments may be 
+                  necessary to relieve symptoms and manage asthma.</p><br>
+              </div>
+        
+              <div id="Pollen" class="container menu padding-48 card">   
+                <p class="text-grey" style="margin-top: 10px;">Climate change will potentially lead to both higher pollen concentrations and longer pollen seasons, 
+                  causing more people to suffer more health effects from pollen and other allergens.
+
+                  Pollen is an airborne allergen that can affect our health. Pollen grains are tiny “seeds” dispersed from flowering plants, trees, grass, and weeds. 
+                  The amount and type of pollen in the air depends on the season and geographic region. Though pollen counts are typically higher during the warmer seasons, 
+                  some plants pollinate year-round.</p><br>
+                <!--<h5>Blueberry Pancakes</h5>-->
+                <p class="text-grey">Climate change will potentially lead to shifts in precipitation patterns, more frost-free days, warmer seasonal air temperatures, 
+                  and more carbon dioxide (CO2) in the atmosphere. These changes can affect:
+
+                  when the pollen season starts and ends and how long it lasts each year,
+                  how much pollen plants create and how much is in the air,
+                  how pollen affects our health (the “allergenicity” of pollen),
+                  how much pollen we’re exposed to, and
+                  our risk of experiencing allergy symptoms.
+
+                  Pollen exposure can trigger various allergic reactions, including symptoms of hay fever. Hay fever, also known as allergic rhinitis, 
+                  occurs when allergens like pollen enter your body and your immune system mistakenly identifies them as a threat. 
+                  If you have allergic rhinitis, your body then responds to the allergen by releasing chemicals that can cause symptoms in the nose. 
+                  Symptoms of allergic rhinitis can occur during certain seasons or year-round, depending on the allergen, and affect as many as 60 million 
+                  people per year in the United States. Symptoms from allergic rhinitis include sneezing, runny nose, and congestion.
+                  
+                  Pollen exposure can also trigger symptoms of allergic conjunctivitis. Allergic conjunctivitis is the inflammation of the lining of 
+                  the eye (conjunctiva) due to exposure to allergens like those in pollen. Allergic conjunctivitis is found in up to 30% of the general 
+                  population and as many as 7 out of 10 of patients with allergic rhinitis. Symptoms from allergic conjunctivitis include red, watery, or itchy eyes.
+                  
+                  People with respiratory illnesses like asthma may be more sensitive to pollen. Exposure to pollen has been linked to asthma attacks 
+                  and increases in hospital admissions for respiratory illness. Medical costs linked with pollen exceed $3 billion every year, with nearly
+                   half of those costs being linked to prescription medicine. Higher pollen concentrations and longer pollen seasons can also make you more 
+                   sensitive to allergens. This can trigger asthma episodes in individuals with asthma and diminish productive work and school days.
+                  
+                  Extreme rainfall and rising temperatures also can contribute to indoor air quality problems. For example, they can cause the growth of 
+                  mold indoors, which may lead to worsened respiratory conditions for people with asthma and/or mold allergies and heightened challenges in 
+                  maintaining adequate asthma control.</p>
+              </div>
+            </div>
+        </div>
+
+      <!-- DownloadLink Container -->
+      <div class="download-container" id="download">
+        <div class="content" style="max-width:700px">
+            <h3>Download Links For Appstore And Google Playstore</h3>
+      </div>
+      <div class="box-container">
+        <div class="box-1">
+            <a href="https://www.google.com.tr/">
+            <img src="Images\download-on-the-play-store-google.svg" width="40%">
+        </a>
+        </div>
+
+        <hr>
+
+        <div class="box-2">
+            <a href="https://www.google.com.tr/">
+            <img src="Images\download-on-the-app-store-apple.svg">
+        </a>
+      </div>
+    
+      <!-- Footer  --><!--   
+      <footer class="center light-grey padding-48 large">
+        <p>Made by ............... <a href="https://www.google.com.tr/" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+      </footer>-->
+</body>
+</html>
